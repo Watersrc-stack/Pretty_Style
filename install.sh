@@ -2,7 +2,7 @@
 
 ALIAS="cs"
 INSTALL_DIR="$HOME/pretty_style"
-SHELL="bash"
+SHELL="zsh"
 
 mkdir $INSTALL_DIR 2> /dev/null
 
@@ -34,8 +34,9 @@ echo "pretty-style.sh -> good"
 
 echo "alias $ALIAS=\"$INSTALL_DIR/pretty-style.sh\"" >> ~/.$SHELL""rc
 echo "New alias $ALIAS installed."
-source ~/.$SHELL""rc
 
 sleep 2
+clear
 
 echo -e "\n\033[0;32m   Install complete.\033[0m\n"
+echo -e "   \033[1;31mDon't forget to restart your terminal\033[0m or \033[1;31msource your rc\033[0m to use the new alias.\n"
