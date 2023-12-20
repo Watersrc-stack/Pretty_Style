@@ -13,6 +13,7 @@ num=$(cat coding-style-reports.log | wc -l)
 if (( $num == 0 )); then
     echo -e "\n   \e[32mNo style errors.\e[0m"
     rm -f coding-style-reports.log
+    exit 0
 else
     if (( $num < 11)); then
         # echo in yellow
@@ -46,4 +47,10 @@ else
     fi
     echo -e "\e[$color""mYou have $num style errors.\e[0m"
     summarize
+fi
+
+echo -e "\n\nPress l key to cat log\n"
+read -rsn1 key
+if [[ $key == 'l' ]]; then
+    cat coding-style-reports.log | awk '{print "   " $1 "  " $2}'
 fi
