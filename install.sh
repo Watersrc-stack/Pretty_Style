@@ -23,7 +23,7 @@ install_files(){
 
 ALIAS="cs"
 INSTALL_DIR="$HOME/pretty_style"
-SHELL="zsh"
+SHELL="bash"
 
 if [ "$1" = "remove" ]; then
     rm -rf $INSTALL_DIR
