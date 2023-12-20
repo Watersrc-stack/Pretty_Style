@@ -2,7 +2,7 @@
 
 ALIAS="cs"
 INSTALL_DIR="$HOME/pretty_style"
-SHELL="zsh"
+SHELL="bash"
 
 mkdir $INSTALL_DIR 2> /dev/null
 
