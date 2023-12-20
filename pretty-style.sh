@@ -1,11 +1,13 @@
 #!/bin/bash
 
+INSTALL_DIR="$HOME/pretty_style"
+
 summarize(){
     echo -e "\n\e[4;34mSUMMARY\e[0m\n"
     cat coding-style-reports.log | cut -d ' ' -f 2 coding-style-reports.log | sort | uniq -c | sort -nr | awk '{c="\033["; if($1<11)c=c"33m"; else if($1<21)c=c"38;5;214m"; else if($1<31)c=c"31m"; else if($1<51)c=c"1;31m"; else if($1<75)c=c"1;31;4m"; else c=c"1;31;5;4m";print"   "c$1" "$2"\033[0m"}'
 }
 
-~/my_scripts/coding-style.sh . . && clear
+$INSTALL_DIR/coding-style.sh . . && clear
 num=$(cat coding-style-reports.log | wc -l)
 
 if (( $num == 0 )); then
