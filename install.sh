@@ -1,5 +1,8 @@
 #!/bin/bash
 
+ALIAS="cs"
+INSTALL_DIR="$HOME/pretty_style"
+SHELL="bash"
 
 install_files(){
     mkdir $INSTALL_DIR 2> /dev/null
@@ -20,10 +23,6 @@ install_files(){
 
     echo "pretty-style.sh -> good"
 }
-
-ALIAS="cs"
-INSTALL_DIR="$HOME/pretty_style"
-SHELL="bash"
 
 if [ "$1" = "remove" ]; then
     rm -rf $INSTALL_DIR
